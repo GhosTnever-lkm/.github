@@ -14,7 +14,7 @@ GitHub surfaces these community health files on repositories that do not provide
 
 ## Contributing
 
-Open an issue before changing shared policy or adding a new template. Keep edits clear, reusable across different projects, and free of project-specific assumptions. For security reports, follow `SECURITY.md` rather than posting details publicly.
+Open an issue before changing shared policy or adding a new template. Keep edits clear, reusable across different projects, and free of project-specific assumptions. For contributions to other repositories, follow that repository's README and contribution guide; the shared `CONTRIBUTING.md` gives general examples, not mandatory commands. For security reports, follow `SECURITY.md` rather than posting details publicly.
 
 ## License
 

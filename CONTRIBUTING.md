@@ -10,27 +10,31 @@ Thanks for your interest! Small, focused contributions are welcome.
 
 ## Development setup
 
-Python projects:
+First read the target repository's README and any repository-specific contribution guide. Its documented setup and checks take precedence over these general examples. Not every repository uses the same test runner, linter, type checker, or package layout.
+
+Python project example (PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest
+```
+
+Use the test command declared by that project. Run lint and type checks only when its configuration provides them; paths and optional dependency groups vary between projects.
+
+JavaScript or browser project example:
 
 ```
-python -m venv .venv && source .venv/bin/activate
-pip install -e .[dev]
-pytest
-ruff check . && ruff format --check .
-mypy src
-```
-
-JavaScript / browser projects:
-
-```
-npm install
+npm ci
 npm test
 ```
 
+If the repository has no lockfile, use its documented install command instead of `npm ci`. If it has no `test` script, follow its README for the available checks.
+
 ## Pull request checklist
 
-- [ ] Tests pass locally and new behavior is covered by a test.
-- [ ] Linters and type checks pass (ruff, mypy, or the project's configured tools).
+- [ ] The repository's documented tests and configured checks pass locally; new behavior is covered by a test when applicable.
+- [ ] Configured linters and type checks pass, if the repository uses them.
 - [ ] README / CHANGELOG updated when behavior changes.
 - [ ] No secrets, tokens, or personal paths in the diff.
 - [ ] Claims in docs match what is actually tested; mark the rest as experimental.
